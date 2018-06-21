@@ -15,14 +15,35 @@
         <h1 class="title">
             Password encoder
         </h1>
+        <div class="columns">
+          <div class="column">
+            <button class="button is-warning" type="button" name="button" onclick="generate()">Generate Simple Password</button>
+          </div>
+          <div class="column">
+            <span id="generatedText"></span>
+          </div>
+        </div>
 
+        <hr>
         <p>Encoder</p>
-        <textarea id="encodetext" class="textarea" rows="10" placeholder="e.g secret password"></textarea>
+        <textarea id="encodetext" class="textarea" rows="10" placeholder="only simple word, no number"></textarea>
         <button class="button is-primary" type="button" name="encode" onclick="encode()">Encode</button>
         <hr>
         <p>Decoder</p>
         <textarea id ="decodetext" class="textarea" rows="10"></textarea>
         <button class="button is-danger" type="button" name="decode" onclick="decode()">Decode</button>
+      </div>
+
+      <div class="modal" id="pwdmodal">
+        <div class="modal-background" onclick="closeModal()"></div>
+        <div class="modal-content">
+          <div class="box">
+            <div class="content">
+                <p>Generated password <strong id="genpass"></strong> is copied to the clipboard</p>
+            </div>
+          </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </section>
   </body>
