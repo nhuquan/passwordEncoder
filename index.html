@@ -20,7 +20,23 @@
             <button class="button is-warning" type="button" name="button" onclick="generate()">Generate Simple Password</button>
           </div>
           <div class="column">
-            <span id="generatedText"></span>
+            <span id="generatedText" class="title is-10 has-background-warning  has-text-weight-bold"></span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="radio">
+                <input type="radio" class="language" name="lang" value="en" checked="">
+                EN
+              </label>
+              <label class="radio">
+                <input type="radio" class="language" name="lang" value="vi">
+                VI
+              </label>
+          </div>
+          <div class="column">
+              <span id="notif" style="display:none"><i>Copied to clipboard</i></span>
           </div>
         </div>
 
